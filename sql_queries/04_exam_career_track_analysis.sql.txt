@@ -1,0 +1,14 @@
+SELECT
+    ei.track_id,
+    COUNT(DISTINCT se.student_id) AS students_attempted_exam,
+    SUM(CASE WHEN se.exam_passed = 1 THEN 1 ELSE 0 END) AS exams_passed,
+    COUNT(DISTINCT scte.student_id) AS students_enrolled_in_track
+FROM student_exams se
+INNER JOIN exam_info ei
+    ON se.exam_id = ei.exam_id
+LEFT JOIN student_career_track_enrollments scte
+    ON ei.track_id = scte.track_id
+GROUP BY
+    ei.track_id
+ORDER BY
+    students_enrolled_in_track DESC;

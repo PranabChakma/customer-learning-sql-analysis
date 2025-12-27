@@ -1,0 +1,13 @@
+SELECT
+    sl.student_id,
+    COUNT(DISTINCT sl.course_id) AS courses_learned,
+    COUNT(DISTINCT sc.certificate_id) AS certificates_earned
+FROM student_learning sl
+LEFT JOIN student_certificates sc
+    ON sl.student_id = sc.student_id
+GROUP BY
+    sl.student_id
+HAVING
+    COUNT(DISTINCT sl.course_id) >= 3
+ORDER BY
+    certificates_earned DESC;

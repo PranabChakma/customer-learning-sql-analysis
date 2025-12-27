@@ -1,0 +1,15 @@
+SELECT
+    sl.course_id,
+    ci.course_title,
+    COUNT(DISTINCT sl.student_id) AS total_students,
+    ROUND(AVG(sl.minutes_watched), 2) AS avg_minutes_watched,
+    ci.course_duration
+FROM student_learning sl
+INNER JOIN course_info ci
+    ON sl.course_id = ci.course_id
+GROUP BY
+    sl.course_id,
+    ci.course_title,
+    ci.course_duration
+ORDER BY
+    avg_minutes_watched DESC;
