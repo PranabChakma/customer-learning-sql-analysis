@@ -84,3 +84,34 @@ ORDER BY
 ```
 
 ![Click Here](SQL_Result/queries_result_3.png)
+
+4. For each career track, how many students attempted the exams, how many passed, and how many are enrolled in the track?
+```
+SELECT
+    ei.track_id,
+    COUNT(DISTINCT se.student_id) AS students_attempted_exam,
+
+    SUM(CASE 
+        WHEN se.exam_passed = 1 THEN 1 
+        ELSE 0 
+    END) AS students_passed_exam,
+
+    COUNT(DISTINCT CASE 
+        WHEN scte.student_id IS NOT NULL 
+        THEN se.student_id 
+    END) AS students_enrolled_in_track
+
+FROM student_exams se
+JOIN exam_info ei
+    ON se.exam_id = ei.exam_id
+
+LEFT JOIN student_career_track_enrollments scte
+    ON se.student_id = scte.student_id
+    AND ei.track_id = scte.track_id
+
+GROUP BY
+    ei.track_id
+ORDER BY
+    students_enrolled_in_track DESC;
+```
+![Click Here](SQL_Result/queries_result_4.png)
