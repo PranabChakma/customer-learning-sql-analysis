@@ -65,3 +65,22 @@ ORDER BY
 ```
 
 ![Click Here](SQL_Result/queries_result_2.png)
+
+3. Which students are most engaged, having taken at least 3 courses, and how many certificates have they purchased?
+```
+SELECT
+    sl.student_id,
+    COUNT(DISTINCT sl.course_id) AS courses_learned,
+    COUNT(DISTINCT sp.purchase_id) AS certificates_purchased
+FROM student_learning sl
+LEFT JOIN student_purchases sp
+    ON sl.student_id = sp.student_id
+GROUP BY
+    sl.student_id
+HAVING
+    COUNT(DISTINCT sl.course_id) >= 3
+ORDER BY
+    certificates_purchased DESC;
+```
+
+![Click Here](SQL_Result/queries_result_3.png)
