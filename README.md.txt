@@ -7,7 +7,7 @@ student engagement, certification sales, and career track effectiveness.
 
 ## 🧠 Business Questions Answered
 1. Which courses have the highest student engagement and best ratings?
-2. What learning behaviors influence course completion?
+2. Which courses have the highest student completion rates and what is the average time students spend on them?
 3. Which students are most likely to purchase certificates?
 4. How does exam performance relate to career track enrollment?
 5. What distinguishes high-engagement students from low-engagement users?
@@ -29,4 +29,5 @@ student engagement, certification sales, and career track effectiveness.
 
 ## 📎 Dataset
 Dataset provided by 365 Data Science (used for educational purposes).
+
 
