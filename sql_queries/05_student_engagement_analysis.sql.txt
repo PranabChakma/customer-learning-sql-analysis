@@ -2,12 +2,19 @@ SELECT
     sl.student_id,
     SUM(sl.minutes_watched) AS total_minutes_watched,
     COUNT(DISTINCT sl.course_id) AS total_courses_learned,
-    COUNT(DISTINCT sp.purchase_id) AS total_purchases
+    COUNT(DISTINCT sp.purchase_id) AS total_purchases,
+
+    CASE
+        WHEN SUM(sl.minutes_watched) >= 500 THEN 'High Engagement'
+        WHEN SUM(sl.minutes_watched) BETWEEN 200 AND 499 THEN 'Medium Engagement'
+        ELSE 'Low Engagement'
+    END AS engagement_level
+
 FROM student_learning sl
 LEFT JOIN student_purchases sp
     ON sl.student_id = sp.student_id
+
 GROUP BY
     sl.student_id
 ORDER BY
-    total_minutes_watched DESC,
-    total_purchases DESC;
+    total_minutes_watched DESC;
