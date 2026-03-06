@@ -6,7 +6,7 @@ The goal is to extract business-driven insights that support decision-making rel
 student engagement, certification sales, and career track effectiveness.
 
 ## 🧠 Business Questions Answered
-1. Which courses generate the highest business value?
+1. Which courses have the highest student engagement and best ratings?
 2. What learning behaviors influence course completion?
 3. Which students are most likely to purchase certificates?
 4. How does exam performance relate to career track enrollment?
@@ -29,3 +29,4 @@ student engagement, certification sales, and career track effectiveness.
 
 ## 📎 Dataset
 Dataset provided by 365 Data Science (used for educational purposes).
+
