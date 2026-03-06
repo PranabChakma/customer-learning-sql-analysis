@@ -26,9 +26,15 @@ ORDER BY
     sl_summary.total_hours_watched DESC,
     cr_summary.avg_course_rating DESC;
 ```
--- Output:
+Output:
 
 ![Click Here](SQL_Result/queries_result_1.png)
+
+Key Insight:
+- Courses with the highest total hours watched show the strongest learner engagement.
+- High average ratings indicate strong learner satisfaction with the course content.
+- Courses ranking high in both engagement and ratings represent the most successful learning content.
+- The analysis helps identify which courses attract the most learners and deliver the best experience.
 
 2. Which courses have the highest student completion rates and what is the average time students spend on them?
 ```
