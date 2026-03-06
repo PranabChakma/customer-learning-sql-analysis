@@ -9,7 +9,7 @@ LEFT JOIN (
     SELECT
         course_id,
         COUNT(DISTINCT student_id) AS total_learners,
-        SUM(minutes_watched) AS total_minutes_watched
+        round(SUM(minutes_watched) / 60, 2) AS total_hours_watched
     FROM student_learning
     GROUP BY course_id
 ) sl_summary ON ci.course_id = sl_summary.course_id
@@ -23,3 +23,4 @@ LEFT JOIN (
 ORDER BY
     sl_summary.total_minutes_watched DESC,
     cr_summary.avg_course_rating DESC;
+
