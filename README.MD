@@ -115,3 +115,28 @@ ORDER BY
     students_enrolled_in_track DESC;
 ```
 ![Click Here](SQL_Result/queries_result_4.png)
+
+5. How engaged are students based on total time spent learning, number of courses completed, and purchases made?
+```
+SELECT
+    sl.student_id,
+    SUM(sl.minutes_watched) AS total_minutes_watched,
+    COUNT(DISTINCT sl.course_id) AS total_courses_learned,
+    COUNT(DISTINCT sp.purchase_id) AS total_purchases,
+
+    CASE
+        WHEN SUM(sl.minutes_watched) >= 500 THEN 'High Engagement'
+        WHEN SUM(sl.minutes_watched) BETWEEN 200 AND 499 THEN 'Medium Engagement'
+        ELSE 'Low Engagement'
+    END AS engagement_level
+
+FROM student_learning sl
+LEFT JOIN student_purchases sp
+    ON sl.student_id = sp.student_id
+
+GROUP BY
+    sl.student_id
+ORDER BY
+    total_minutes_watched DESC;
+```
+![Click Here](SQL_Result/queries_result_5.png)
