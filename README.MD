@@ -172,4 +172,3 @@ ORDER BY
 - Classifies students as High, Medium, or Low engagement by minutes watched.
 - High engagement → most active learners; Low engagement → need support.
 - Shows connection between time spent, courses taken, and purchases.
-![Click Here](SQL_Result/queries_result_5.png)
