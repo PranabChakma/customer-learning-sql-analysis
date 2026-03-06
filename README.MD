@@ -1,5 +1,4 @@
 
-```
 SELECT
     ci.course_id,
     ci.course_title,
