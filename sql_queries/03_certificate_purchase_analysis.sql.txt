@@ -1,3 +1,5 @@
+-- Which students are most engaged, having taken at least 3 courses, and how many certificates have they purchased?
+
 SELECT
     sl.student_id,
     COUNT(DISTINCT sl.course_id) AS courses_learned,
@@ -11,3 +13,4 @@ HAVING
     COUNT(DISTINCT sl.course_id) >= 3
 ORDER BY
     certificates_purchased DESC;
+
