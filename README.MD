@@ -1,3 +1,12 @@
+## Customer Learning & engagement Analysis - 365 EdTech Platform
+## Project Overview
+This project analyzes student engagement, course performance, and exam outcomes on the 365 Data Science platform using SQL.
+It identifies top courses, learner activity levels, completion rates, certificate purchases, and career track performance to provide
+actionable insights for improving learning outcomes and engagement.
+
+## Tool Used
+- MySQL 
+
 ## Which courses have the highest student engagement and best ratings?
 ```
 SELECT
