@@ -1,5 +1,5 @@
 -- 1. Which courses have the highest student engagement and best ratings?
-</> sql
+```
 SELECT
     ci.course_id,
     ci.course_title,
