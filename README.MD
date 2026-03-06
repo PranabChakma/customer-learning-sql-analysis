@@ -26,7 +26,7 @@ ORDER BY
     sl_summary.total_hours_watched DESC,
     cr_summary.avg_course_rating DESC;
 
-## Output:
-</> Markdown
+-- Output:
+
 ![Click Here](SQL_Result/queries_result_1.png)
 
