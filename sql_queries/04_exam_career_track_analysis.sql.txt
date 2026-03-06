@@ -1,3 +1,5 @@
+-- For each career track, how many students attempted the exams, how many passed, and how many are enrolled in the track?
+
 SELECT
     ei.track_id,
     COUNT(DISTINCT se.student_id) AS students_attempted_exam,
@@ -24,3 +26,4 @@ GROUP BY
     ei.track_id
 ORDER BY
     students_enrolled_in_track DESC;
+
