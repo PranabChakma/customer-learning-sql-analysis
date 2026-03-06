@@ -1,4 +1,4 @@
--- 1. Which courses have the highest student engagement and best ratings?
+## Which courses have the highest student engagement and best ratings?
 ```
 SELECT
     ci.course_id,
