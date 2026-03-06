@@ -10,7 +10,7 @@ student engagement, certification sales, and career track effectiveness.
 2. Which courses have the highest student completion rates and what is the average time students spend on them?
 3. Which students are most engaged, having taken at least 3 courses, and how many certificates have they purchased?
 4. For each career track, how many students attempted the exams, how many passed, and how many are enrolled in the track?
-5. What distinguishes high-engagement students from low-engagement users?
+5. How engaged are students based on total time spent learning, number of courses completed, and purchases made?
 
 ## 🛠 Tools & Skills Used
 - SQL (JOINs, GROUP BY, CASE, HAVING, Aggregations)
@@ -29,6 +29,7 @@ student engagement, certification sales, and career track effectiveness.
 
 ## 📎 Dataset
 Dataset provided by 365 Data Science (used for educational purposes).
+
 
 
 
