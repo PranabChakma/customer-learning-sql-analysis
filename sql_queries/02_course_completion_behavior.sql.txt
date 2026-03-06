@@ -1,3 +1,5 @@
+-- Which courses have the highest student completion rates and what is the average time students spend on them?
+
 SELECT
     sl.course_id,
     ci.course_title,
@@ -28,3 +30,4 @@ GROUP BY
 
 ORDER BY
     completion_rate DESC;
+
