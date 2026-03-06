@@ -99,9 +99,12 @@ ORDER BY
 ![Click Here](SQL_Result/queries_result_3.png)
 
 ## Key Insight:
+- The query identifies active students who have completed at least three courses.
+- It compares learning engagement with certificate purchases.
+- Students purchasing more certificates likely value formal recognition of their learning.
+- The analysis highlights opportunities to increase certificate adoption among highly engaged learners.
 
-
-4. For each career track, how many students attempted the exams, how many passed, and how many are enrolled in the track?
+## For each career track, how many students attempted the exams, how many passed, and how many are enrolled in the track?
 ```
 SELECT
     ei.track_id,
@@ -130,9 +133,16 @@ GROUP BY
 ORDER BY
     students_enrolled_in_track DESC;
 ```
+## Output
 ![Click Here](SQL_Result/queries_result_4.png)
 
-5. How engaged are students based on total time spent learning, number of courses completed, and purchases made?
+## Key Insight:
+- Tracks with higher enrollments show popular career paths.
+- The difference between exam attempts and passes reveals pass rates and potential challenges.
+- Insights help identify tracks where students may need extra support.
+- The data shows how students progress through career tracks and certification exams.
+
+## How engaged are students based on total time spent learning, number of courses completed, and purchases made?
 ```
 SELECT
     sl.student_id,
@@ -155,4 +165,11 @@ GROUP BY
 ORDER BY
     total_minutes_watched DESC;
 ```
+## Output
+![Click Here](SQL_Result/queries_result_5.png)
+
+## Key Insight:
+- Classifies students as High, Medium, or Low engagement by minutes watched.
+- High engagement → most active learners; Low engagement → need support.
+- Shows connection between time spent, courses taken, and purchases.
 ![Click Here](SQL_Result/queries_result_5.png)
