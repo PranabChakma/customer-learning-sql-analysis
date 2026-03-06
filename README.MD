@@ -1,4 +1,5 @@
-
+-- 1. Which courses have the highest student engagement and best ratings?
+</> sql
 SELECT
     ci.course_id,
     ci.course_title,
@@ -26,6 +27,6 @@ ORDER BY
     cr_summary.avg_course_rating DESC;
 
 ## Output:
-
+</> Markdown
 ![Click Here](SQL_Result/queries_result_1.png)
 
