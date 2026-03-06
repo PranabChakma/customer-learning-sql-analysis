@@ -70,10 +70,16 @@ GROUP BY
 ORDER BY
     completion_rate DESC;
 ```
-
+## Output
 ![Click Here](SQL_Result/queries_result_2.png)
 
-3. Which students are most engaged, having taken at least 3 courses, and how many certificates have they purchased?
+## Key Insight:
+- Courses with higher completion rates indicate strong learner engagement and effective course design.
+- Some courses attract many students but show lower completion rates, suggesting potential improvements in content or structure.
+- Average minutes watched highlights overall learner engagement with the course material.
+- Courses with high completion rates and high watch time represent the most successful learning experiences.
+
+## Which students are most engaged, having taken at least 3 courses, and how many certificates have they purchased?
 ```
 SELECT
     sl.student_id,
@@ -89,8 +95,11 @@ HAVING
 ORDER BY
     certificates_purchased DESC;
 ```
-
+## Output
 ![Click Here](SQL_Result/queries_result_3.png)
+
+## Key Insight:
+
 
 4. For each career track, how many students attempted the exams, how many passed, and how many are enrolled in the track?
 ```
