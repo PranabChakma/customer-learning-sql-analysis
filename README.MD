@@ -146,7 +146,7 @@ ORDER BY
 ```
 SELECT
     sl.student_id,
-    SUM(sl.minutes_watched) AS total_minutes_watched,
+    round(SUM(sl.minutes_watched) / 60,2) AS total_hours_watched,
     COUNT(DISTINCT sl.course_id) AS total_courses_learned,
     COUNT(DISTINCT sp.purchase_id) AS total_purchases,
 
@@ -163,7 +163,7 @@ LEFT JOIN student_purchases sp
 GROUP BY
     sl.student_id
 ORDER BY
-    total_minutes_watched DESC;
+    total_hours_watched DESC;
 ```
 ## Output
 ![Click Here](SQL_Result/queries_result_5.png)
