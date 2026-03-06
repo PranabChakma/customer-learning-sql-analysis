@@ -24,8 +24,9 @@ LEFT JOIN (
 ) cr_summary ON ci.course_id = cr_summary.course_id
 ORDER BY
     sl_summary.total_hours_watched DESC,
-    cr_summary.avg_course_rating DESC; ```
+    cr_summary.avg_course_rating DESC;
 
+## Output:
 
 ![Click Here](SQL_Result/queries_result_1.png)
 
