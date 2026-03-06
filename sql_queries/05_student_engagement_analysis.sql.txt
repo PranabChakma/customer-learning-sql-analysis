@@ -1,3 +1,5 @@
+-- How engaged are students based on total time spent learning, number of courses completed, and purchases made?
+
 SELECT
     sl.student_id,
     SUM(sl.minutes_watched) AS total_minutes_watched,
@@ -18,3 +20,4 @@ GROUP BY
     sl.student_id
 ORDER BY
     total_minutes_watched DESC;
+
