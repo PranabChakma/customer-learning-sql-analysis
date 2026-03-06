@@ -1,4 +1,4 @@
-## Which courses have the highest student engagement and best ratings?
+-- Which courses have the highest student engagement and best ratings?
 
 SELECT
     ci.course_id,
@@ -31,3 +31,4 @@ ORDER BY
 - Courses with a high average rating indicate strong content quality.
 - Combining engagement and ratings identifies top-performing courses that could be promoted, reused as templates, or expanded into advanced modules.
 - Courses with low engagement but high ratings may need better marketing, while those with high engagement but low ratings may require content improvement.
+
