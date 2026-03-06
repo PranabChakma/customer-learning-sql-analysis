@@ -2,14 +2,29 @@ SELECT
     sl.course_id,
     ci.course_title,
     COUNT(DISTINCT sl.student_id) AS total_students,
-    ROUND(AVG(sl.minutes_watched), 2) AS avg_minutes_watched,
-    ci.course_duration
+
+    COUNT(DISTINCT CASE
+        WHEN sl.minutes_watched >= ci.course_duration
+        THEN sl.student_id
+    END) AS students_completed,
+
+    ROUND(
+        COUNT(DISTINCT CASE
+            WHEN sl.minutes_watched >= ci.course_duration
+            THEN sl.student_id
+        END) * 100.0 /
+        COUNT(DISTINCT sl.student_id),
+    2) AS completion_rate,
+
+    ROUND(AVG(sl.minutes_watched),2) AS avg_minutes_watched
+
 FROM student_learning sl
-INNER JOIN course_info ci
+JOIN course_info ci
     ON sl.course_id = ci.course_id
+
 GROUP BY
     sl.course_id,
-    ci.course_title,
-    ci.course_duration
+    ci.course_title
+
 ORDER BY
-    avg_minutes_watched DESC;
+    completion_rate DESC;
