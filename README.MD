@@ -5,7 +5,7 @@ It identifies top courses, learner activity levels, completion rates, certificat
 actionable insights for improving learning outcomes and engagement.
 
 ## Tool Used
-- MySQL 
+MySQL : Used as the primary database for querying and analyzing data
 
 ## Which courses have the highest student engagement and best ratings?
 ```
